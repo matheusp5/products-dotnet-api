@@ -8,9 +8,10 @@ namespace Products_API.Controllers;
 public class HomeController : Controller
 {
     private readonly IProductRepository _Repository;
-    public HomeController(IProductRepository Repository) {
-        this._Repository = Repository;
+    public HomeController(IProductRepository IRepository) {
+        this._Repository = IRepository;
     }
+    
     [HttpGet()]
     public List<Product> GetAll()
     {
